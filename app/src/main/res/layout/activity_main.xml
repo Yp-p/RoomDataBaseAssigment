@@ -30,7 +30,7 @@
         android:id="@+id/btnMainGetName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="DELETE BY NAME"
+        android:text="GET BY NAME"
         app:layout_constraintTop_toBottomOf="@id/deleteById"/>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerResult"
