@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "836790038883",
+    "firebase_url": "https://userinfo-82157.firebaseio.com",
+    "project_id": "userinfo-82157",
+    "storage_bucket": "userinfo-82157.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:836790038883:android:b8737958ae080e48e7a356",
+        "android_client_info": {
+          "package_name": "com.ypp.testroomdatabase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "836790038883-7pbugf2uk5ehi6cm8o7k4e40sc9u1869.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbVCAm2ms3ZHzEu45s-mPnJCIbzM3JnpE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "836790038883-7pbugf2uk5ehi6cm8o7k4e40sc9u1869.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

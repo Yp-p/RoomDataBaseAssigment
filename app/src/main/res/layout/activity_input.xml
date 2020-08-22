@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InputActivity">
+    <EditText
+        android:id="@+id/idInsert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter ID"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <EditText
+        android:id="@+id/nameInsert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Product Name"
+        app:layout_constraintTop_toBottomOf="@id/idInsert"/>
+    <EditText
+        android:id="@+id/priceInsert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Product Price"
+        app:layout_constraintTop_toBottomOf="@id/nameInsert"/>
+    <EditText
+        android:id="@+id/quantityInsert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Product Quantity"
+        app:layout_constraintTop_toBottomOf="@+id/priceInsert"/>
+    <Button
+        android:id="@+id/btnSummit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SUMMIT"
+        app:layout_constraintTop_toBottomOf="@id/quantityInsert"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
