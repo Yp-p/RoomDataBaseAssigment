@@ -10,6 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Enter ID"
+        android:inputType="number"
         app:layout_constraintTop_toTopOf="parent"/>
     <EditText
         android:id="@+id/nameInsert"
@@ -21,12 +22,14 @@
         android:id="@+id/priceInsert"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:inputType="number"
         android:hint="Enter Product Price"
         app:layout_constraintTop_toBottomOf="@id/nameInsert"/>
     <EditText
         android:id="@+id/quantityInsert"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:inputType="number"
         android:hint="Enter Product Quantity"
         app:layout_constraintTop_toBottomOf="@+id/priceInsert"/>
     <Button
