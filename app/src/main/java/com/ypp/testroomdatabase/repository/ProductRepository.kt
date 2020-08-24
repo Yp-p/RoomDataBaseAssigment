@@ -23,6 +23,8 @@ import com.ypp.testroomdatabase.model.Product
 
 class ProductRepository (private val productDao: ProductDao){
     val allProduct:LiveData<List<Product>> = productDao.getAllProduct()
+//    lateinit var productByName
+
     suspend fun insert(product: Product){
         productDao.insert(product)
     }
@@ -33,8 +35,9 @@ class ProductRepository (private val productDao: ProductDao){
     suspend fun deleteByID(id:Int){
         productDao.deleteID(id)
     }
-    fun getName(name:String){
-        productDao.getProductName(name)
+    fun getName(name:String): LiveData<List<Product>>{
+       var productByName: LiveData<List<Product>> = productDao.getProductName(name)
+        return productByName
     }
 }
 

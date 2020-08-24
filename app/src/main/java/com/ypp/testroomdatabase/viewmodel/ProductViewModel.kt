@@ -31,7 +31,7 @@ class ProductViewModel(application: Application):AndroidViewModel(application){
     fun deleteByID(id:Int)=viewModelScope.launch {
         repository.deleteByID(id)
     }
-    fun getName(name:String)=viewModelScope.launch {
-        repository.getName(name)
+    fun getName(name:String): LiveData<List<Product>>{
+        return repository.getName(name)
     }
 }

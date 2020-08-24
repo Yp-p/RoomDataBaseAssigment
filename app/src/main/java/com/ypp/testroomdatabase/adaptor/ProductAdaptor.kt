@@ -35,6 +35,7 @@ class ProductAdaptor:RecyclerView.Adapter<ProductAdaptor.ProductVIewHolder>() {
         }
 
     }
+
     fun updateList(productList: List<Product>){
         this.list=productList
         notifyDataSetChanged()

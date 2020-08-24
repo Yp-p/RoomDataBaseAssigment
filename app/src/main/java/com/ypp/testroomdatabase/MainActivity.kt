@@ -51,6 +51,7 @@ class MainActivity : AppCompatActivity() , ProductAdaptor.ClickListener{
 
 
 
+
         btnAdd.setOnClickListener{
             val intent=Intent(
                 this,
@@ -68,9 +69,9 @@ class MainActivity : AppCompatActivity() , ProductAdaptor.ClickListener{
                 .setView(mDialogView)
                 .setTitle("DELETE")
             val mAlertDialog=mBuilder.show()
-            mDialogView.btnitem_DeleteID.setOnClickListener {
+            mDialogView.btnitem.setOnClickListener {
                 mAlertDialog.dismiss()
-                productViewModel.deleteByID(mDialogView.delete_idEdit.text.toString().toInt())
+                productViewModel.deleteByID(mDialogView.input.text.toString().toInt())
             }
         }
 
@@ -82,10 +83,20 @@ class MainActivity : AppCompatActivity() , ProductAdaptor.ClickListener{
                 setTitle("GET")
             }
             val mAlertDialog=mBuilder.show()
-            mAlertDialog.btnitem_DeleteID.setOnClickListener {
+            mAlertDialog.btnitem.setOnClickListener {
                 mAlertDialog.dismiss()
-                productViewModel.getName(mDialogView.delete_idEdit.text.toString())
-                Toast.makeText(this, mDialogView.delete_idEdit.text, Toast.LENGTH_SHORT).show()
+                productViewModel.getName(mDialogView.input.text.toString())
+                Toast.makeText(this, mDialogView.input.text, Toast.LENGTH_SHORT).show()
+//                val intent= Intent(this, GetNameActivity::class.java)
+//
+//                startActivity(intent)
+                productViewModel.getName(mDialogView.input.text.toString()).observe(
+                    this, Observer {product->
+                        product.let {
+                            productAdaptor.updateList(product)
+                        }
+                    }
+                )
             }
         }
     }
